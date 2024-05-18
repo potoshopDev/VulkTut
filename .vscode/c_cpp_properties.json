@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${vcpkgRoot}/x86-windows/include",
+                "C:/Users/potos/.conan2/p/glmdf97922a12435/p/include",
+                "C:/Users/potos/.conan2/p/glfw946ea7b9a8695/p/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/Program Files/LLVM/bin/clang++.exe"
+        }
+    ],
+    "version": 4
+}

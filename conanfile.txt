@@ -1,0 +1,8 @@
+[requires]
+glm/cci.20230113
+glfw/3.4
+[generators]
+CMakeDeps
+CMakeToolchain
+[layout]
+cmake_layout
