@@ -1,5 +1,8 @@
 module;
 
+#define GLFW_INCLUDE_VULKAN
+#include <GLFW/glfw3.h>
+
 export module HelloTriangleApp;
 import std;
 
@@ -14,7 +17,7 @@ namespace prvt
     public:
         iHelloTriangleApp() = default;
         virtual void run() = 0;
-        virtual ~iHelloTriangleApp() {}
+        virtual ~iHelloTriangleApp() { glfwTerminate(); }
     };
 
     class HelloTriangleApp final : public iHelloTriangleApp

@@ -9,6 +9,7 @@ import <glm/mat4x4.hpp>;
 import std;
 import HelloTriangleApp;
 
+
 int main() {
 
     auto app {vta::make_hello_app()};

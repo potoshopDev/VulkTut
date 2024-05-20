@@ -21,7 +21,7 @@ namespace prvt
     {
     public:
         virtual uglfw_window create_new_window(const uint32_t width = 800, const uint32_t height = 600) noexcept = 0;
-        virtual ~iglfw_window() { glfwTerminate(); }
+        virtual ~iglfw_window() {}
     };
 
     class glfw_window final : public iglfw_window

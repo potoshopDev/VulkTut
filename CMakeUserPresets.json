@@ -4,6 +4,6 @@
         "conan": {}
     },
     "include": [
-        "D:\\Repos\\tmp\\test\\vulkan\\1\\build\\build\\generators\\CMakePresets.json"
+        "C:\\proj\\vulkan\\VulkTut\\build\\build\\generators\\CMakePresets.json"
     ]
 }
