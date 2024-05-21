@@ -1,14 +1,13 @@
 module;
 
-#define GLFW_INCLUDE_VULKAN
-#include <GLFW/glfw3.h>
 
 export module HelloTriangleApp;
 import std;
+import struct_generate;
 
 namespace prvt
 {
-    void init_vulkan();
+    vta::vk_objects init_vulkan();
     void main_loop();
     void cleanup_vulkan();
 
@@ -17,13 +16,15 @@ namespace prvt
     public:
         iHelloTriangleApp() = default;
         virtual void run() = 0;
-        virtual ~iHelloTriangleApp() { glfwTerminate(); }
+        virtual ~iHelloTriangleApp() {  }
     };
 
     class HelloTriangleApp final : public iHelloTriangleApp
     {
+        std::unique_ptr<vta::vk_objects> objects;
+
     public:
-        HelloTriangleApp() { init_vulkan(); }
+        HelloTriangleApp() : objects ( std::make_unique<vta::vk_objects>(std::move(init_vulkan()))) {} 
         virtual void run() override { main_loop(); }
         virtual ~HelloTriangleApp() { cleanup_vulkan(); }
     };
